@@ -434,7 +434,7 @@ footer:
   owner:
     enable: true
     since: 2020
-  custom_text:
+  custom_text: 图源画师：ほし、和武はざの、白もち桜　　作品版权归原作者所有
   runtime:
     enable: false
     launch_time: 04/01/2021 00:00:00 # 网站上线时间

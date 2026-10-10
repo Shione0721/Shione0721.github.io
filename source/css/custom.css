@@ -41,7 +41,16 @@
 }
 #random-banner > * { position: relative; z-index: 1; }
 #random-banner .banners-title, #random-banner .banners-title-big,
-#random-banner .banners-title-small, #random-banner a#random-hover .bannerText {
+#random-banner .banners-title-small, /* 页脚画师声明 */
+.footer_custom_text {
+  text-align: center;
+  font-size: .78rem;
+  opacity: .85;
+  letter-spacing: .02em;
+  padding: 6px 14px 2px;
+}
+
+#random-banner a#random-hover .bannerText {
   color: #fff !important;
   text-shadow: 0 2px 16px rgba(40, 20, 60, .8);
 }
