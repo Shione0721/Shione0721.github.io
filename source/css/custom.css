@@ -1,0 +1,14 @@
+/* 页头背景：深蓝渐变（呼应深蓝底金边的整体调子） */
+#page-header.full_page,
+#page-header.not-top-img,
+#page-header {
+  background: linear-gradient(135deg, #0d1a2e 0%, #16294a 55%, #1e3a66 100%) !important;
+}
+#page-header.full_page { background-attachment: scroll !important; }
+#site-title, #site-subtitle { text-shadow: 0 2px 14px rgba(0, 0, 0, 0.45); }
+/* 标题用衬线体，正文保持无衬线 */
+#site-title, #site-subtitle, .post-title, h1, h2, h3 {
+  font-family: 'Source Han Serif SC', 'Noto Serif SC', 'Songti SC', 'SimSun', serif;
+}
+/* 卡片圆角与描边稍作收紧 */
+#recent-posts .recent-post-item { border-radius: 10px; }
