@@ -16,3 +16,32 @@
   text-shadow: 0 2px 14px rgba(72, 44, 108, .55);
 }
 #site-title, #site-subtitle, .article-title { letter-spacing: .02em; }
+
+/* 首页头图：用真实立绘当背景。index_img 只能填 CSS 值，图片路径带斜杠会被主题的 url_for() 改坏，所以在这里覆盖内联样式 */
+#page-header.full_page {
+  background-image: url('/img/hero-home.jpg') !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* 「随便逛逛」卡片：直接用整张图当背景（peoplecanvas 那种切成 15x7 小人的玩法会把插画切碎） */
+#random-banner {
+  background: url('/img/people-cover.jpg') center/cover no-repeat;
+  min-height: 280px;
+}
+#random-banner { position: relative; overflow: hidden; }
+#random-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(200deg, rgba(70, 40, 105, .08) 0%, rgba(70, 40, 105, .60) 100%);
+}
+#random-banner > * { position: relative; z-index: 1; }
+#random-banner .banners-title, #random-banner .banners-title-big,
+#random-banner .banners-title-small, #random-banner a#random-hover .bannerText {
+  color: #fff !important;
+  text-shadow: 0 2px 16px rgba(40, 20, 60, .8);
+}
