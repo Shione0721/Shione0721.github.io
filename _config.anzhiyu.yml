@@ -145,7 +145,7 @@ favicon: /favicon.ico
 
 # Avatar (头像)
 avatar:
-  img: /img/avatar.png
+  img: /img/avatar.jpg
   effect: false
 
 # Disable all banner image
@@ -1084,7 +1084,7 @@ home_top:
   banner:
     tips: 汐宁的小站
     title: 欢迎来坐坐呀
-    image: /img/avatar.png
+    image: /img/avatar.jpg
     link: /about/
 
 # 朋友圈配置
