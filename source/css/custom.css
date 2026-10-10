@@ -17,22 +17,6 @@
 }
 #site-title, #site-subtitle, .article-title { letter-spacing: .02em; }
 
-/* 头图换成浅色插画后，导航栏那些白色图标（含随机文章骰子 #randomPost_button）
-   在浅背景上会糊掉，补一层深色描边让它们重新显形 */
-/* 只给字体图标描边；骰子是 emoji，别给它上滤镜免得染色 */
-#page-header #nav i.anzhiyufont:not(.anzhiyu-icon-dice),
-#page-header #nav .site-page i:not(.anzhiyu-icon-dice) {
-  filter: drop-shadow(0 1px 2px rgba(45, 22, 75, .95)) drop-shadow(0 0 7px rgba(45, 22, 75, .55));
-}
-
-/* 主题的 anzhiyufont 字体里没有 dice 字形，骰子按钮会渲染成空白（点不到），用 emoji 兜底 */
-#page-header #randomPost_button i.anzhiyu-icon-dice::before {
-  content: "\1F3B2";
-  font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif !important;
-  font-size: 15px;
-  line-height: 1;
-}
-
 /* 首页头图：用真实立绘当背景。index_img 只能填 CSS 值，图片路径带斜杠会被主题的 url_for() 改坏，所以在这里覆盖内联样式 */
 #page-header.full_page {
   background-image: url('/img/hero-home.jpg') !important;
@@ -55,9 +39,7 @@
   pointer-events: none;
   background: linear-gradient(200deg, rgba(70, 40, 105, .08) 0%, rgba(70, 40, 105, .60) 100%);
 }
-#random-banner > .banners-title { position: relative; z-index: 1; }
-/* 主题的「随便逛逛」是 absolute 满卡覆盖层（hover 时才显示），只抬 z-index，别动它的定位 */
-#random-banner a#random-hover { z-index: 2; }
+#random-banner > * { position: relative; z-index: 1; }
 #random-banner .banners-title, #random-banner .banners-title-big,
 #random-banner .banners-title-small, /* 页脚画师声明 */
 .footer_custom_text {
