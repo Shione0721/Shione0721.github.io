@@ -248,7 +248,7 @@ post_copyright:
 
 # Sponsor/reward
 reward:
-  enable: true
+  enable: false
   QR_code:
     - img: https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png
       link:
@@ -317,8 +317,9 @@ addtoany:
 
 comments:
   # Up to two comments system, the first will be shown as default
-  # Choose: Valine/Waline/Twikoo/Artalk
-  use: # Twikoo/Waline
+  # Choose: Valine/Waline/Twikoo/Artalk/Giscus
+  use:
+    - Giscus
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
@@ -380,17 +381,18 @@ artalk:
 # giscus
 # https://giscus.app/
 giscus:
-  repo: # GitHub repository name
-  repo_id: # GitHub repository id
-  category_id: # GitHub repository category id
+  repo: Shione0721/Shione0721.github.io
+  repo_id: R_kgDOVDiA_A
+  category_id: DIC_kwDOVDiA_M4DHe8n
   theme:
     light: light
     dark: dark
-  option: # options
+  option:
     data-lang: zh-CN
-    data-mapping:
-    data-category:
-    data-input-position:
+    data-mapping: pathname
+    data-strict: '0'
+    data-reactions-enabled: '1'
+    data-input-position: top
 
 # Chat Services
 # --------------------------------------
